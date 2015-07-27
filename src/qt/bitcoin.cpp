@@ -1,3 +1,17 @@
+Skip to content
+This repository  
+Pull requests
+Issues
+Gist
+ @iGotSpots
+ Unwatch 1
+  Unstar 1
+  Fork 1
+iGotSpots/GorillaBucks
+Tree: c766a28526  GorillaBucks/src/qt/bitcoin.cpp
+@MoreBloodWineMoreBloodWine 8 days ago UjinM6 forgot something...
+1 contributor
+RawBlameHistory    332 lines (281 sloc)  11.256 kB
 /*
  * W.J. van der Laan 2011-2012
  */
@@ -19,6 +33,7 @@
 #ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
 #endif
+#include "masternodeconfig.h"
 
 #include <QMessageBox>
 #include <QTextCodec>
@@ -166,6 +181,14 @@ int main(int argc, char *argv[])
         return 1;
     }
     ReadConfigFile(mapArgs, mapMultiArgs);
+
+    // ... then masternode.conf
+    string strErr;
+    if(!masternodeConfig.read(strErr)) {
+        QMessageBox::critical(0, "GorillaBucks",
+                              QString("Error reading masternode configuration file: %1").arg(strErr.c_str()));
+        return 1;
+    }
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
@@ -320,3 +343,5 @@ int main(int argc, char *argv[])
     return 0;
 }
 #endif // BITCOIN_QT_TEST
+Status API Training Shop Blog About Help
+© 2015 GitHub, Inc. Terms Privacy Security Contact
