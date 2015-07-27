@@ -1,7 +1,3 @@
-/*
- * W.J. van der Laan 2011-2012
- */
-
 #include <QApplication>
 
 #include "bitcoingui.h"
