@@ -1,17 +1,3 @@
-Skip to content
-This repository  
-Pull requests
-Issues
-Gist
- @iGotSpots
- Unwatch 1
-  Unstar 1
-  Fork 1
-iGotSpots/GorillaBucks
-Tree: c766a28526  GorillaBucks/src/qt/bitcoin.cpp
-@MoreBloodWineMoreBloodWine 8 days ago UjinM6 forgot something...
-1 contributor
-RawBlameHistory    332 lines (281 sloc)  11.256 kB
 /*
  * W.J. van der Laan 2011-2012
  */
@@ -343,5 +329,3 @@ int main(int argc, char *argv[])
     return 0;
 }
 #endif // BITCOIN_QT_TEST
-Status API Training Shop Blog About Help
-© 2015 GitHub, Inc. Terms Privacy Security Contact
